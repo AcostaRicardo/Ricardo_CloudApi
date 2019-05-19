@@ -12543,11 +12543,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LAPTOP\\Desktop\\Cloud_API\\QuotesApi\\QuotesApi\\MovieApi.csproj",
+      "projectUniqueName": "C:\\Users\\LAPTOP\\Documents\\GitHub\\Ricardo_CloudApi\\MY_API\\QuotesApi\\QuotesApi\\MovieApi.csproj",
       "projectName": "MovieApi",
-      "projectPath": "C:\\Users\\LAPTOP\\Desktop\\Cloud_API\\QuotesApi\\QuotesApi\\MovieApi.csproj",
+      "projectPath": "C:\\Users\\LAPTOP\\Documents\\GitHub\\Ricardo_CloudApi\\MY_API\\QuotesApi\\QuotesApi\\MovieApi.csproj",
       "packagesPath": "C:\\Users\\LAPTOP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LAPTOP\\Desktop\\Cloud_API\\QuotesApi\\QuotesApi\\obj\\",
+      "outputPath": "C:\\Users\\LAPTOP\\Documents\\GitHub\\Ricardo_CloudApi\\MY_API\\QuotesApi\\QuotesApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
