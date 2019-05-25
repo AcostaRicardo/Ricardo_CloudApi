@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as Magic from 'mtgsdk-ts';
+//import * as Magic from "mtgsdk-ts"
 
 @Component({
   selector: 'app-cards',
@@ -12,11 +12,10 @@ export class CardsComponent implements OnInit {
     
   }
   
-
   ngOnInit() {
-    Magic.Cards.where({name: "Nicol"}).then(results => {
-     for (const card of results) console.log(card.name);
-    });
+
+    //console.log(Magic.Cards.where({name:"Nicol"}));
+
   }
 
   

@@ -30,8 +30,14 @@ namespace QuotesApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddDbContext<MoviesDbContext>(option=> option.UseSqlServer(@"Data Source =(localdb)\MSSQLLocalDB;Initial Catalog=QuotesDb;"));
+            //services.AddDbContext<MoviesDbContext>(option=> option.UseSqlServer(@"Data Source =(localdb)\MSSQLLocalDB;Initial Catalog=QuotesDb;"));
             services.AddMvc().AddXmlDataContractSerializerFormatters();
+
+            services.AddDbContext<MoviesDbContext>(
+                options => options.UseMySQL(
+                    Configuration.GetConnectionString("DefaultConnection")
+                    )
+            );
 
             // 1. Add Authentication Services
             services.AddAuthentication(options =>
@@ -43,7 +49,6 @@ namespace QuotesApi
                 options.Authority = "https://ricardomoviesapi.auth0.com/";
                 options.Audience = "http://localhost:55631/";
             });
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

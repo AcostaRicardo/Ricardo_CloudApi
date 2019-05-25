@@ -12,7 +12,7 @@ namespace MovieApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class MoviesController : ControllerBase
     {
         private MoviesDbContext _moviesDbContext;
@@ -23,9 +23,10 @@ namespace MovieApi.Controllers
             
         }
 
-        
+
 
         // GET: api/Movies
+        //[Authorize]
         [HttpGet]
         public IActionResult Get(String sort)
         {
@@ -86,11 +87,13 @@ namespace MovieApi.Controllers
             return id;
         }
         // POST: api/Movies
+        [Authorize]
         [HttpPost]
         public IActionResult Post([FromBody] Movie movie)
         {
             _moviesDbContext.Movies.Add(movie);
             _moviesDbContext.SaveChanges();
+            
             return StatusCode(StatusCodes.Status201Created);
             
         }
