@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MagicService, Card } from '../services/magic.service';
+import { MagicService, Card, ICardList } from '../services/magic.service';
 import * as _ from "lodash"
 @Component({
   selector: 'app-cards',
@@ -11,7 +11,7 @@ export class CardsComponent implements OnInit {
   pageCounter : number
 
   eenKaart : Card
-  aCard : Card[] //Lijst met kaarten (5 in totaal)
+  aCards : ICardList //Lijst met kaarten (5 in totaal)
 
   constructor(private magicSvc: MagicService) {
     
@@ -24,7 +24,7 @@ export class CardsComponent implements OnInit {
     this.magicSvc.GetCards(this.pageCounter).subscribe(cardList => {
       
       this.eenKaart = cardList.cards[0]
-      this.aCard = cardList.cards
+      this.aCards = cardList
 
 
     })

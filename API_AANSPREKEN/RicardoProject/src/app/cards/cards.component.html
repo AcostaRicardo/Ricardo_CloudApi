@@ -2,11 +2,16 @@
   cards works!
 </p>
 
-
-<!-- <img src="{{photoUrl}}" alt=""> -->
-
-<img src="{{eenKaart.imageUrl}}" alt="">
-
-<div *ngFor="let card of aCards">{{card.imageUrl}}
+<!-- <div style="display:inline-block" *ngFor="let card of aCards.cards">
+  <div style="display:inline-block">
     <img [src]="card.imageUrl" alt="">
+  </div>  
+</div> -->
+<div style="display:inline-block">  
+  <p-card style="display: inline-block; padding: 30px;" *ngFor="let card of aCards.cards" subtitle="Subtitle" [style]="{width: '320px'}" styleClass="ui-card-shadow">
+  <p-header>
+    <img [src]="card.imageUrl" alt="">
+  </p-header>
+  <div>{{card.text}}</div>
+</p-card>
 </div>

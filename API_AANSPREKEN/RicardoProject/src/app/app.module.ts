@@ -15,7 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { CardsComponent } from './cards/cards.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MagicService } from './services/magic.service';
-
+import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -31,6 +31,7 @@ import { MagicService } from './services/magic.service';
     FormsModule,
     ToolbarModule,
     ButtonModule,
+    CardModule,
     RouterModule.forRoot([
       {path: "home",component:HomeComponent},
       {path:"cards",component:CardsComponent},
