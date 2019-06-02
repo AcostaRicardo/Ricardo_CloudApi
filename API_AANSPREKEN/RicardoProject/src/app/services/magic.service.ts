@@ -12,6 +12,12 @@ export class MagicService {
   {
     return this.http.get<ICardList>("https://api.magicthegathering.io/v1/cards?page=" + counter + "&pageSize=8") 
   }
+
+  GetCardById(id){
+    return this.http.get<Card>("https://api.magicthegathering.io/v1/cards/" + id)
+  }
+
+
 }
 
 export interface Ruling {

@@ -12,9 +12,10 @@
 </div>
 
 
-<div *ngIf="aCards" class="kaart" style="margin-left: 145px"> <!--  --> <!--  -->
+<div *ngIf="aCards" class="kaart" style="margin-left: 145px">
       <p-card class="contentcard" *ngFor="let card of aCards.cards" subtitle="Subtitle" [style]="{width: '340px'}" styleClass="ui-card-shadow">
         <p-header>
+          <h2 style="text-align: center">{{card.name}}</h2>
           <img [src]="card.imageUrl" alt="">
         </p-header>
         <p-footer>{{card.text}}</p-footer>

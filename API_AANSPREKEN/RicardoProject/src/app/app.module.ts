@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
@@ -16,13 +16,15 @@ import { CardsComponent } from './cards/cards.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MagicService } from './services/magic.service';
 import {CardModule} from 'primeng/card';
+import { CardByIdComponent } from './card-by-id/card-by-id.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CardsComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    CardByIdComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,7 @@ import {CardModule} from 'primeng/card';
     RouterModule.forRoot([
       {path: "home",component:HomeComponent},
       {path:"cards",component:CardsComponent},
+      {path:"card-by-id",component:CardByIdComponent},
       {path:"",redirectTo: "home", pathMatch: "full"}
     ])
   ],

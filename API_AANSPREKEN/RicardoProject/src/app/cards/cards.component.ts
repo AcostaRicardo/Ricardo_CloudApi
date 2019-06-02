@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MagicService, Card, ICardList } from '../services/magic.service';
 import * as _ from "lodash"
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
@@ -12,7 +13,7 @@ export class CardsComponent implements OnInit {
 
   aCards : ICardList //Lijst met kaarten (5 in totaal)
 
-  constructor(private magicSvc: MagicService) {
+  constructor(public route: Router, private magicSvc: MagicService) {
     
    }
 
@@ -37,5 +38,5 @@ export class CardsComponent implements OnInit {
       this.magicSvc.GetCards(this.pageCounter).subscribe(success => {
         this.aCards = success;
       });
-    }
+  }
 }
