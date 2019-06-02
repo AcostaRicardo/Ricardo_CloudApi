@@ -2,4 +2,11 @@
   cards works!
 </p>
 
-<img src="{{photoUrl}}" alt="">
+
+<!-- <img src="{{photoUrl}}" alt=""> -->
+
+<img src="{{eenKaart.imageUrl}}" alt="">
+
+<div *ngFor="let card of aCards">{{card.imageUrl}}
+    <img [src]="card.imageUrl" alt="">
+</div>

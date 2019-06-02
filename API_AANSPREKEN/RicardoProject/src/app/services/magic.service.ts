@@ -8,9 +8,9 @@ export class MagicService {
 
   constructor(private http: HttpClient) { }
 
-  GetCards()
+  GetCards(counter)
   {
-    return this.http.get<ICardList>("https://api.magicthegathering.io/v1/cards")
+    return this.http.get<ICardList>("https://api.magicthegathering.io/v1/cards?page=" + counter + "&pageSize=5") 
   }
 }
 
