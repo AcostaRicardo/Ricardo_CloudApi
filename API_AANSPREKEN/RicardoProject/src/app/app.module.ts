@@ -1,0 +1,45 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+
+//TOEGEVOEGDE MODULES:
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+
+import {ToolbarModule} from 'primeng/toolbar';
+import {ButtonModule} from 'primeng/button';
+import {RouterModule} from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { CardsComponent } from './cards/cards.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { MagicService } from './services/magic.service';
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    CardsComponent,
+    ToolbarComponent
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    ToolbarModule,
+    ButtonModule,
+    RouterModule.forRoot([
+      {path: "home",component:HomeComponent},
+      {path:"cards",component:CardsComponent},
+      {path:"",redirectTo: "home", pathMatch: "full"}
+    ])
+  ],
+  providers: [
+    MagicService
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
