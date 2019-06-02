@@ -1,7 +1,7 @@
 <input [(ngModel)]="id"> 
 <button (click)="SearchId(id)">Search by id</button> 
 
-<div *ngIf="id">
+<div *ngIf="id" class="kaart" style="margin-left: 145px">
   <div *ngIf="singleCard">
     <p-card class="contentcard" subtitle="Subtitle" [style]="{width: '340px'}" styleClass="ui-card-shadow">
         <p-header>
@@ -13,4 +13,4 @@
   </div>
 </div>
 
-<p *ngIf="!id">Search Card</p>
+<h2 *ngIf="!id">Search a card</h2>

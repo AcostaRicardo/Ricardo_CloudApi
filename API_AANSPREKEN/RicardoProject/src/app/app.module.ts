@@ -17,6 +17,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MagicService } from './services/magic.service';
 import {CardModule} from 'primeng/card';
 import { CardByIdComponent } from './card-by-id/card-by-id.component';
+import { CardByNameComponent } from './card-by-name/card-by-name.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CardByIdComponent } from './card-by-id/card-by-id.component';
     HomeComponent,
     CardsComponent,
     ToolbarComponent,
-    CardByIdComponent
+    CardByIdComponent,
+    CardByNameComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { CardByIdComponent } from './card-by-id/card-by-id.component';
       {path: "home",component:HomeComponent},
       {path:"cards",component:CardsComponent},
       {path:"card-by-id",component:CardByIdComponent},
+      {path:"card-by-name",component:CardByNameComponent},
       {path:"",redirectTo: "home", pathMatch: "full"}
     ])
   ],

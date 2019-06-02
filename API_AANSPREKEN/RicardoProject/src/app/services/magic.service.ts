@@ -17,7 +17,9 @@ export class MagicService {
     return this.http.get<Card>("https://api.magicthegathering.io/v1/cards/" + id)
   }
 
-
+  GetCardByName(name){
+    return this.http.get<ICardList>("https://api.magicthegathering.io/v1/cards?name=" + name)
+  }
 }
 
 export interface Ruling {
