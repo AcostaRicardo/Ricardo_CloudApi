@@ -10,7 +10,6 @@ export class CardsComponent implements OnInit {
 
   pageCounter : number
 
-  eenKaart : Card
   aCards : ICardList //Lijst met kaarten (5 in totaal)
 
   constructor(private magicSvc: MagicService) {
@@ -22,12 +21,21 @@ export class CardsComponent implements OnInit {
     this.pageCounter = 1
 
     this.magicSvc.GetCards(this.pageCounter).subscribe(cardList => {
-      
-      this.eenKaart = cardList.cards[0]
       this.aCards = cardList
-
-
     })
+  }  
+  
+  Next(){
+    this.pageCounter++;
+      this.magicSvc.GetCards(this.pageCounter).subscribe(success => {
+        this.aCards = success;
+      });
   }
 
+  Back(){
+    this.pageCounter--;
+      this.magicSvc.GetCards(this.pageCounter).subscribe(success => {
+        this.aCards = success;
+      });
+    }
 }

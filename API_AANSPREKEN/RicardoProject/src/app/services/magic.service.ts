@@ -10,7 +10,7 @@ export class MagicService {
 
   GetCards(counter)
   {
-    return this.http.get<ICardList>("https://api.magicthegathering.io/v1/cards?page=" + counter + "&pageSize=5") 
+    return this.http.get<ICardList>("https://api.magicthegathering.io/v1/cards?page=" + counter + "&pageSize=8") 
   }
 }
 
