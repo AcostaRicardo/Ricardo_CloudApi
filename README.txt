@@ -11,6 +11,7 @@ https://movieapi-241020.appspot.com/api/movies/FilterYear?filteryear=2001
 
 FILTER ASCEND & DESCEND:
 https://movieapi-241020.appspot.com/api/movies?sort=asc
+https://movieapi-241020.appspot.com/api/movies?sort=desc
 
 POST:
 https://movieapi-241020.appspot.com/api/movies
