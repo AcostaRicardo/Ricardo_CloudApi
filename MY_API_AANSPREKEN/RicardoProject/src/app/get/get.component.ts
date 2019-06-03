@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MagicService, IMovie } from '../services/magic.service';
+import { ResourceLoader } from '@angular/compiler';
 
 @Component({
   selector: 'app-get',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetComponent implements OnInit {
 
-  constructor() { }
+  aMovie : IMovie[]
+
+  constructor(private magicSvc: MagicService) { }
 
   ngOnInit() {
+    
+  }
+
+  GetMovie(){
+    this.magicSvc.GetMovie().subscribe(movie => {
+      this.aMovie = movie
+      console.log(this.aMovie[0].title) 
+    })
   }
 
 }

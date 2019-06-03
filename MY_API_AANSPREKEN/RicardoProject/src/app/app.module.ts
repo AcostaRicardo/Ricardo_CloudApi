@@ -19,6 +19,7 @@ import {CardModule} from 'primeng/card';
 import { GetComponent } from './get/get.component';
 import { PostComponent } from './post/post.component';
 import { getComponent } from '@angular/core/src/linker/component_factory_resolver';
+import { AuthService } from './auth.service';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { getComponent } from '@angular/core/src/linker/component_factory_resolve
     ])
   ],
   providers: [
-    MagicService
+    MagicService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

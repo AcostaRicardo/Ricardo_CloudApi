@@ -68,6 +68,9 @@ namespace QuotesApi
             app.UseHttpsRedirection();
             //quotesDbContext.Database.EnsureCreated();
             // 2. Enable authentication middleware
+            app.UseCors(builder =>
+                builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
+            );
             app.UseAuthentication();
 
             app.UseMvc();
